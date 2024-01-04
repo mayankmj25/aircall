@@ -1,7 +1,9 @@
 import React from 'react';
+import Flexbox from './Flexbox.jsx'
 
 const Header = () => {
   return (
+    <Flexbox>
     <header>
       <svg width='486px' height='168px' viewBox='0 0 486 168' version='1.1' xmlns='http://www.w3.org/2000/svg'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
@@ -19,6 +21,7 @@ const Header = () => {
         </g>
       </svg>
     </header>
+    </Flexbox>
   );
 };
 
