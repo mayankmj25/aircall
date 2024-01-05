@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Flexbox from './Flexbox.jsx'
+import { SlOptionsVertical } from "react-icons/sl";
 
-const Header = () => {
+
+const Header = ({activeTab, setActiveTab}) => {
+
   return (
-    <Flexbox>
-    <header>
+    <Flexbox justifyContent='space-between' alignItems='center' style={{paddingBottom: 8}}>
+      <Flexbox>
+      <header>
       <svg width='486px' height='168px' viewBox='0 0 486 168' version='1.1' xmlns='http://www.w3.org/2000/svg'>
         <g stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g transform='translate(207.000000, 24.000000)'>
@@ -21,6 +25,20 @@ const Header = () => {
         </g>
       </svg>
     </header>
+      </Flexbox>
+    <Flexbox >
+    <button className='header-button' style={activeTab === 'inbox' ? { borderBottom: '3px solid orange' } : null} onClick={() => setActiveTab('inbox')}> {/* Conditional styling for active tab */}
+          Inbox
+        </button>
+    </Flexbox>
+    <Flexbox>
+    <button className='header-button' style={activeTab === 'all' ? { borderBottom: '3px solid orange' } : null} onClick={() => setActiveTab('all')}> {/* Conditional styling for active tab */}
+          All Calls
+        </button>
+    </Flexbox>
+    <Flexbox>
+    <SlOptionsVertical style={{ paddingLeft: 40 }} />
+    </Flexbox>
     </Flexbox>
   );
 };

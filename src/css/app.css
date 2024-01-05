@@ -13,13 +13,45 @@
   width: 376px;
   height: 666px;
   z-index: 100;
-
+  padding: 0 20px;
+  padding-top: 12px;
   background: white;
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
+  overflow: hidden;
+}
+
+#app .header {
+  flex-shrink: 0; /* Don't allow the header to shrink */
+  /* Set a fixed height if necessary */
+}
+
+#app .footer {
+  flex-shrink: 0; /* Don't allow the footer to shrink */
+  /* Set a fixed height if necessary */
 }
 
 #app .container-view {
-  padding: 20px;
+  flex-grow: 1;
+}
+
+#app .container-view {
+  height: calc(666px - 100px); /* 100px is the combined height of header and footer */
+  overflow-y: auto;
+}
+
+#app .container-view::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+
+#app .container-view::-webkit-scrollbar-thumb {
+  background-color: #88888864; 
+  border-radius: 10px;
+}
+
+/* To style the scrollbar itself */
+#app .container-view::-webkit-scrollbar {
+  width: 4px; 
 }
 

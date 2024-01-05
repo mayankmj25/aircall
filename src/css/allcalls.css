@@ -1,0 +1,19 @@
+.archieve_all {
+    padding-block: 12px;
+    border: 0.2px solid rgba(128, 128, 128, 0.201);
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.date_header {
+    color: gray;
+    padding-block: 8px;
+}
+
+.call_item {
+    padding-block: 8px;
+    padding-inline: 8px;
+    border: 0.2px solid rgba(128, 128, 128, 0.201);
+    border-radius: 12px;
+    margin-block: 4px;
+}
